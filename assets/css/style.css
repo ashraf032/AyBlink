@@ -1,0 +1,312 @@
+/* @import url(../fonts/Roboto/stylesheet.css); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url(../fonts/Artful/stylesheet.css); */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+
+body {
+  
+  font-family: 'Poppins';
+ }
+ .active{
+  color: #3f8dec !important;
+ }
+
+
+  .contact{
+    background: linear-gradient(-45deg,#fd723b,#3f8dec);
+    height: 124px;
+}
+
+div h1 {
+  font-size: 22px;
+  color: white;
+}
+
+div.home-line {
+  color: white;
+
+}
+
+.home-line a {
+  color: white;
+  text-decoration: none;
+}
+
+div.home-line p  {
+  display: flex;
+  justify-content: end;
+  /* position: relative; */
+  margin-right: 100px;
+}
+
+
+
+div.contact-line {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-left: 55px;
+}
+
+
+ 
+.col-5 {
+  /* background-color: white; */
+  /* padding-top: 200px!important; */
+  width: 50%;
+} 
+
+.colorClass {
+  border-radius: 8px;
+  background-color: white;
+}
+
+.sendMessage {
+  display: flex;
+  justify-content: center;
+}
+
+
+.input{
+  width: 80%!important;
+  height: 50px;
+}
+
+.form-control{
+  border-radius: 8px!important;
+  border-color: white!important;
+  box-shadow: none!important;
+}
+
+.form-control:focus{
+  border-radius: 8px!important;
+  border-color: rgb(91, 91, 246)!important;
+}
+
+button {
+  width: 80%;
+  height: 50px;
+}
+
+button:hover {
+  border-color: #fd723b!important;
+  background-color: #fd723b!important;
+}
+
+.text-container {
+  /* padding-top: 150px!important; */
+
+  width: 40%;
+}
+
+
+
+main {
+  background-color: #f4f7fa;
+}
+
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input-form{
+  color: gray;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.container {
+  padding-top: 110px;
+}
+
+main .container .wrapper{
+  display: flex;
+}
+.wrapper {
+  justify-content: space-evenly;
+  /* width: 80%; */
+}
+
+h2{
+  font-weight: 700;
+}
+
+.logoTwo {
+  width: 100px!important;
+  height: 60px!important;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blink {
+  width: 100px;
+}
+
+.footer-top div.foot {
+  display: inline-block;
+}
+
+
+.footerUl  {
+  list-style: none;
+  padding-left: 1px;
+  padding-top: 20px;
+}
+
+.footerUl li {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.footerUl li :hover{
+  color: #3f8dec;
+}
+
+footer {
+  padding-top: 250px;
+  padding-bottom: 150px;
+}
+
+p.foot {
+  margin-top: 20px;
+
+}
+
+p.grayGridLinkClass {
+  margin-top: 40px;
+}
+
+p.grayGridLinkClass a {
+  text-decoration: none;
+}
+
+p.grayGridLinkClass a:hover{
+  color: #fd723b!important;
+} 
+
+h3.footerCaption {
+  display: flex;
+  justify-content: center;
+  font-size: 17px!important;
+  font-weight: 600!important;
+}
+
+.color a  {
+  text-decoration: none;
+  color: gray;
+}
+
+.color {
+  color: gray;
+}
+
+.footerForm button  {
+  margin-top: 15px;
+  width: 52px;
+  background-color: #3f8dec;
+  border: #3f8dec;
+  border-radius: 8px;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+}
+
+.colorClass3{
+  padding-top: 20px;
+  color: gray;
+}
+
+.input-div {
+  box-shadow: 0 0 35px #00000012;
+  padding: 46px;
+}
+
+.footerForm button i {
+  color: white;
+}
+
+.footer-input {
+
+  height: 55px;
+  position: absolute;
+  
+}
+
+.footer-input:focus {
+  border-color: white!important;
+}
+
+.footer-input:hover {
+  border-color: #3f8dec !important;
+}
+
+
+.footerForm {
+  padding-top: 15px;
+  position: relative;
+}
+
+.sub {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 845px)  {
+
+  h1 {
+    margin-right: 90px;
+    padding-top: 10px;
+  }
+  .home-line{
+    margin-left: 123px;
+  }
+  .contact-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .container .wrapper {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+  }
+
+  .input-div {
+    width: 100%;
+  }
+  .form-control {
+    width: 100%;
+  }
+
+  .foot {
+    width: 100%;
+  }
+
+  footer {
+    padding-top: 0;
+  }
+
+  footer .footer-top {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+  
+}
+

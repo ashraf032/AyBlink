@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+  
+  body {
+    font-family: 'Roboto';
+    overflow-x: hidden; }
+  
+  .bubbles {
+    position: absolute;
+    height: 90vh; }
+    .bubbles .orangeBubble {
+      background-color: #fd723b;
+      height: 350px;
+      width: 350px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      transform: translate(-50%, -50%); }
+    .bubbles .blueBubble {
+      width: 1000px;
+      height: 1000px;
+      background-color: #3080E3;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      overflow-x: hidden;
+      transform: translate(80%, -10%); }
+    .bubbles .pinkBubble {
+      background-color: #FAB8C4;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -2; }
+    .bubbles .pinkBubble.pink1 {
+      height: 110px;
+      width: 110px;
+      top: 170px;
+      left: 600px; }
+    .bubbles .pinkBubble.mini1 {
+      height: 50px;
+      width: 50px;
+      top: 370px;
+      left: 40px; }
+    .bubbles .pinkBubble.pink2 {
+      height: 150px;
+      width: 150px;
+      bottom: -200px;
+      left: 700px; }
+  
+  .scrollUpButton {
+    position: fixed;
+    bottom: 45px;
+    right: 40px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3080E3;
+    transition: .3s;
+    border: none; }
+    .scrollUpButton i {
+      color: white; }
+    .scrollUpButton:hover {
+      background-color: #fd723b;
+      transform: translateY(-5px); }
+  
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    transition: .3s; }
+    header .navLogo {
+      height: 100%;
+      width: 10%;
+      display: inherit;
+      align-items: center; }
+      header .navLogo img {
+        height: 35%; }
+    header nav {
+      display: inherit;
+      align-items: center;
+      width: 30%;
+      height: 100%; }
+      header nav .navList {
+        display: inherit;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%; }
+        header nav .navList li.home {
+          position: relative; }
+          header nav .navList li.home ul {
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: .5s;
+            height: 0;
+            width: 200px;
+            background-color: white;
+            box-shadow: 0px 0px 15px -10px gray;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -100px;
+            left: -40px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; }
+            header nav .navList li.home ul li a {
+              color: gray;
+              font-size: 14px;
+              font-weight: 500;
+              text-decoration: none; }
+              header nav .navList li.home ul li a:hover {
+                color: #3080E3; }
+          header nav .navList li.home:hover ul {
+            height: 100px;
+            opacity: 100%;
+            transform: translateY(0px); }
+        header nav .navList li.Pages {
+          position: relative; }
+          header nav .navList li.Pages ul {
+            transform: translateY(-120px);
+            opacity: 0;
+            transition: 0.5s;
+            height: 0px;
+            width: 200px;
+            background-color: white;
+            box-shadow: 0px 0px 15px -10px gray;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -350px;
+            left: -40px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; }
+            header nav .navList li.Pages ul li a {
+              color: gray;
+              font-size: 14px;
+              font-weight: 500;
+              text-decoration: none; }
+              header nav .navList li.Pages ul li a:hover {
+                color: #3080E3; }
+          header nav .navList li.Pages:hover ul {
+            height: 350px;
+            opacity: 100;
+            transform: translateY(0px); }
+        header nav .navList li.Blog {
+          position: relative; }
+          header nav .navList li.Blog ul {
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: 0.5s;
+            height: 0;
+            width: 200px;
+            background-color: white;
+            box-shadow: 0px 0px 15px -10px gray;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -100px;
+            left: -40px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; }
+            header nav .navList li.Blog ul li a {
+              color: gray;
+              font-size: 14px;
+              font-weight: 500;
+              text-decoration: none; }
+              header nav .navList li.Blog ul li a:hover {
+                color: #3080E3; }
+          header nav .navList li.Blog:hover ul {
+            height: 100px;
+            opacity: 100;
+            transform: translateY(0px); }
+        header nav .navList li {
+          height: 100%;
+          display: inherit;
+          align-items: center;
+          white-space: nowrap;
+          margin: 0px 10px 0px 10px; }
+          header nav .navList li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            font-size: 15px;
+            transition: .3s color; }
+          header nav .navList li:hover a {
+            color: #3080E3; }
+    header .loginFormButtons {
+      display: flex;
+      width: 20%;
+      justify-content: space-around;
+      align-items: center; }
+      header .loginFormButtons a {
+        margin: 0px 5px 0px 5px; }
+      header .loginFormButtons .signInButton {
+        text-decoration: none;
+        color: black;
+        transition: .3s color;
+        white-space: nowrap; }
+        header .loginFormButtons .signInButton:hover {
+            color: #3080E3;
+          text-decoration: underline; }
+      header .loginFormButtons .signUpButton {
+        color: white!important;
+        background-color: #3080E3!important;
+        text-decoration: none;
+        color: black;
+        transition: .3s background-color, .3s color;
+        font-weight: 500;
+        background-color: white;
+        height: 45px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        white-space: nowrap; }
+
+    header .burgerMenu {
+      display: none;
+      position: relative; }
+      header .burgerMenu i {
+        font-size: 50px;
+        transition: .3s;
+        color: #3080E3; }
+        header .burgerMenu i:hover {
+          color: #fd723b; }
+    header ul.navListBurger {
+      position: absolute;
+      top: 100px;
+      width: 90%;
+      padding: 0; }
+      header ul.navListBurger div.accordion {
+        box-shadow: 0px 0px 20px -5px gray;
+        border-radius: 20px; }
+        header ul.navListBurger div.accordion div.nonCollapsBurgerNav {
+          height: 52px;
+          display: flex;
+          align-items: center; }
+          header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 {
+            padding: 19px; }
+            header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a {
+              transition: .3s color;
+              text-decoration: none;
+              color: black; }
+              header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a:hover {
+                color: #3080E3; }
+        header ul.navListBurger div.accordion .accordion-button:not(.collapsed) {
+          background-color: white; }
+        header ul.navListBurger div.accordion div.accordion-item:first-of-type .accordion-button {
+          border-top-left-radius: 20px !important;
+          border-top-right-radius: 20px !important; }
+        header ul.navListBurger div.accordion div.accordion-item:last-of-type .accordion-button {
+          border-bottom-left-radius: 20px !important;
+          border-bottom-right-radius: 20px !important; }
+        header ul.navListBurger div.accordion div.accordion-item:last-of-type {
+          border-bottom-left-radius: 20px !important;
+          border-bottom-right-radius: 20px !important; }
+        header ul.navListBurger div.accordion div.accordion-item.nonCollapsBurgerNav {
+          border-radius: 0px !important; }
+        header ul.navListBurger div.accordion div.accordion-item {
+          border-top-left-radius: 20px !important;
+          border-top-right-radius: 20px !important;
+          border: none; }
+          header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button {
+            font-weight: 500;
+            transition: .3s color; }
+            header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button:hover {
+              color: #3080E3; }
+          header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul {
+            list-style: none; }
+            header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a {
+              transition: .3s color;
+              text-decoration: none;
+              color: gray; }
+              header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a:hover {
+                color: #3080E3; }
+  
+  @media only screen and (max-width: 996px) {
+    .bubbles {
+      display: none; }
+    header nav {
+      display: none; }
+    header .loginFormButtons {
+      display: none; }
+    header .burgerMenu {
+      display: block; } }
+  
+
+      header {
+        height: 90px;
+        background-color: white;
+      }
+
+      
