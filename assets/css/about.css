@@ -91,8 +91,8 @@ div.contact-line {
 }
 
 footer {
-  padding-top: 250px;
-  padding-bottom: 150px;
+  padding-top: 115px;
+  padding-bottom: 90px;
 }
 
 p.foot {
@@ -129,15 +129,19 @@ h3.footerCaption {
 }
 
 .footerForm button  {
-  height: 50px;
-  margin-top: 15px;
-  width: 52px;
+  height: 49px;
+  margin-top: 16px;
+  width: 50px;
   background-color: #3f8dec;
   border: #3f8dec;
   border-radius: 8px;
   position: absolute;
   right: 3px;
   top: 2px;
+}
+
+.footerForm button:hover{
+  background-color: #fd723b;
 }
 
 .colorClass3{
@@ -189,4 +193,178 @@ h3.footerCaption {
   border-radius: 8px!important;
   border-color: rgb(91, 91, 246)!important;
 }
+/* 
+h4,h5,.sed,.elementIcon{
+display: inline-block;
+} */
 
+
+h4{
+  font-size: 15px;
+  color: #3f8dec;
+}
+
+h5{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.sed{
+  color: #727272;
+  font-size: 16px;
+}
+
+h6{
+  font-size: 15px;
+}
+
+.elementPar{
+  color: #727272;
+  position: relative;
+}
+
+.textHumans{
+  margin-left: 200px;
+}
+
+.elementIcon{
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 35px #00000012;
+  text-align: center;
+  /* position: relative; */
+  padding-top: 17px;
+
+}
+
+
+#icon{
+  text-align: center;
+  width: 20px;
+  height: 30px;
+  /* position: absolute; */
+}
+
+.elementIcon:hover{
+  background-color: #3f8dec;
+}
+
+
+.fourLogo{
+  background-color: #f4f7fa;
+  padding: 45px;
+}
+
+.log{
+  padding: 30px;
+}
+
+.logoIcons{
+  padding-top: 42px;
+}
+
+
+.asdfg{
+  padding-top: 120px;
+}
+
+/* 
+
+
+
+
+
+
+*/
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.side-menu {
+  position: absolute;
+  height: 100vh;
+  background-color: rgb(141, 141, 141);
+  right: -200px;
+  top: 0px;
+  padding: 20px 20px 20px 50px;
+  transition: all .3s ease;
+}
+
+.side-menu a {
+  display: block;
+  text-align: right;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.side-menu.active {
+  right: 0px;
+}
+
+.scrollup {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.banner-item {
+  background-color: thistle;
+  background-position: center;
+  background-size: cover;
+}
+
+#testi {
+  background-color: #f4f7fa;
+}
+
+.testi-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.testi-wrapper p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.testi-wrapper p.testi-text {
+  
+  
+  color: black;
+  margin-bottom: 30px;
+}
+
+.testi-wrapper img {
+  width: auto !important;
+}
+
+.owl-nav {
+  display: none !important;
+}
+.owl-dots{
+  padding-top: 40px;
+}
+.owl-theme .owl-dots .owl-dot span{
+  width: 15px;
+  height: 5px;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+  background-color: blue!important;
+  width: 25px!important;
+}
+
+.mb-0 {
+  color: black;
+}

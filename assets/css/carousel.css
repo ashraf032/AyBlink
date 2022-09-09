@@ -1,0 +1,82 @@
+/* 
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.side-menu {
+    position: absolute;
+    height: 100vh;
+    background-color: rgb(141, 141, 141);
+    right: -200px;
+    top: 0px;
+    padding: 20px 20px 20px 50px;
+    transition: all .3s ease;
+}
+
+.side-menu a {
+    display: block;
+    text-align: right;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.side-menu.active {
+    right: 0px;
+}
+
+.scrollup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.banner-item {
+    background-color: thistle;
+    background-position: center;
+    background-size: cover;
+}
+
+#testi {
+    background-color: #f4f7fa;
+}
+
+.testi-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.testi-wrapper p {
+    font-weight: bolder;
+}
+
+.testi-wrapper p.testi-text {
+    margin-bottom: 30px;
+}
+
+.testi-wrapper img {
+    width: auto !important;
+}
+
+.owl-nav {
+    display: none !important;
+}
+.owl-dots{
+    padding-top: 40px;
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 15px;
+    height: 5px;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+    background-color: blue!important;
+    width: 25px!important;
+} */ 
