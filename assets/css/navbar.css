@@ -75,7 +75,9 @@
     background-color: transparent;
     position: sticky;
     top: 0;
-    transition: .3s; }
+    transition: .3s;
+    z-index: 1;
+   }
     header .navLogo {
       height: 100%;
       width: 10%;
