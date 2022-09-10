@@ -1,57 +1,74 @@
 @import url(../fonts/Roboto/stylesheet.css);
 @import url(../fonts/Artful/stylesheet.css);
 @import url(../fonts/Poppins/stylesheet.css);
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'poppins';
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .bubbles {
   position: absolute;
-  height: 90vh; }
-  .bubbles .orangeBubble {
-    background-color: #fd723b;
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    transform: translate(-50%, -50%); }
-  .bubbles .blueBubble {
-    display: none;
-    width: 1000px;
-    height: 1000px;
-    background-color: #3080E3;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    overflow-x: hidden;
-    transform: translate(80%, -10%); }
-  .bubbles .pinkBubble {
-    background-color: #FAB8C4;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -2; }
-  .bubbles .pinkBubble.pink1 {
-    height: 110px;
-    width: 110px;
-    top: 170px;
-    left: 600px; }
-  .bubbles .pinkBubble.mini1 {
-    height: 50px;
-    width: 50px;
-    top: 370px;
-    left: 40px; }
-  .bubbles .pinkBubble.pink2 {
-    height: 150px;
-    width: 150px;
-    bottom: -220px;
-    left: 700px;
-    z-index: 2; }
+  height: 90vh;
+}
+
+.bubbles .orangeBubble {
+  background-color: #fd723b;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.bubbles .blueBubble {
+  /* display: none; */
+  width: 1000px;
+  height: 1000px;
+  background-color: #3080E3;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  overflow-x: hidden;
+  transform: translate(80%, -10%);
+}
+
+.bubbles .pinkBubble {
+  background-color: #FAB8C4;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -2;
+}
+
+.bubbles .pinkBubble.pink1 {
+
+  height: 110px;
+  width: 110px;
+  top: 170px;
+  left: 600px;
+}
+
+.bubbles .pinkBubble.mini1 {
+  height: 50px;
+  width: 50px;
+  top: 370px;
+  left: 40px;
+}
+
+.bubbles .pinkBubble.pink2 {
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+  bottom: -220px;
+  left: 700px;
+}
 
 .scrollUpButton {
   position: fixed;
@@ -65,12 +82,17 @@ body {
   background-color: #3080E3;
   transition: .3s;
   border: none;
-  z-index: 999; }
-  .scrollUpButton i {
-    color: white; }
-  .scrollUpButton:hover {
-    background-color: #fd723b;
-    transform: translateY(-5px); }
+  z-index: 999;
+}
+
+.scrollUpButton i {
+  color: white;
+}
+
+.scrollUpButton:hover {
+  background-color: #fd723b;
+  transform: translateY(-5px);
+}
 
 header {
   height: 100px;
@@ -80,1132 +102,1793 @@ header {
   padding: 0px 5% 0px 5%;
   background-color: transparent;
   position: sticky;
-  z-index: 3;
+  z-index: 1;
   top: 0;
-  transition: .3s; }
-  header .navLogo {
-    height: 100%;
-    width: 10%;
-    display: inherit;
-    align-items: center; }
-    header .navLogo img {
-      height: 35%; }
-  header nav {
-    display: inherit;
-    align-items: center;
-    width: 30%;
-    height: 100%; }
-    header nav .navList {
-      display: inherit;
-      align-items: center;
-      justify-content: space-around;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      margin-left: 21%; }
-      header nav .navList li.home {
-        position: relative; }
-        header nav .navList li.home ul {
-          transform: translateY(-20px);
-          opacity: 0;
-          transition: .5s;
-          height: 0;
-          width: 200px;
-          background-color: white;
-          box-shadow: 0px 0px 15px -10px gray;
-          border-radius: 5px;
-          position: absolute;
-          bottom: -100px;
-          left: -40px;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden; }
-          header nav .navList li.home ul li a {
-            color: gray;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none; }
-            header nav .navList li.home ul li a:hover {
-              color: #3080E3; }
-        header nav .navList li.home:hover ul {
-          height: 100px;
-          opacity: 100%;
-          transform: translateY(0px); }
-      header nav .navList li.Pages {
-        position: relative; }
-        header nav .navList li.Pages ul {
-          transform: translateY(-120px);
-          opacity: 0;
-          transition: 0.5s;
-          height: 0px;
-          width: 200px;
-          background-color: white;
-          box-shadow: 0px 0px 15px -10px gray;
-          border-radius: 5px;
-          position: absolute;
-          bottom: -350px;
-          left: -40px;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden; }
-          header nav .navList li.Pages ul li a {
-            color: gray;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none; }
-            header nav .navList li.Pages ul li a:hover {
-              color: #3080E3; }
-        header nav .navList li.Pages:hover ul {
-          height: 350px;
-          opacity: 100;
-          transform: translateY(0px); }
-      header nav .navList li.Blog {
-        position: relative; }
-        header nav .navList li.Blog ul {
-          transform: translateY(-20px);
-          opacity: 0;
-          transition: 0.5s;
-          height: 0;
-          width: 200px;
-          background-color: white;
-          box-shadow: 0px 0px 15px -10px gray;
-          border-radius: 5px;
-          position: absolute;
-          bottom: -100px;
-          left: -40px;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden; }
-          header nav .navList li.Blog ul li a {
-            color: gray;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none; }
-            header nav .navList li.Blog ul li a:hover {
-              color: #3080E3; }
-        header nav .navList li.Blog:hover ul {
-          height: 100px;
-          opacity: 100;
-          transform: translateY(0px); }
-      header nav .navList li {
-        height: 100%;
-        display: inherit;
-        align-items: center;
-        white-space: nowrap;
-        margin: 0px 10px 0px 10px; }
-        header nav .navList li a {
-          text-decoration: none;
-          color: black;
-          font-weight: 500;
-          font-size: 15px;
-          transition: .3s color; }
-        header nav .navList li:hover a {
-          color: #3080E3; }
-  header .loginFormButtons {
-    display: flex;
-    width: 20%;
-    justify-content: space-around;
-    align-items: center; }
-    header .loginFormButtons a {
-      margin: 0px 5px 0px 5px; }
-    header .loginFormButtons .signInButton {
-      text-decoration: none;
-      color: white;
-      transition: .3s color;
-      white-space: nowrap; }
-      header .loginFormButtons .signInButton:hover {
-        text-decoration: underline; }
-    header .loginFormButtons .signUpButton {
-      text-decoration: none;
-      color: black;
-      transition: .3s background-color, .3s color;
-      font-weight: 500;
-      background-color: white;
-      height: 45px;
-      width: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 30px;
-      white-space: nowrap; }
-      header .loginFormButtons .signUpButton:hover {
-        color: white;
-        background-color: #fd723b; }
-  header .burgerMenu {
-    display: none;
-    position: relative; }
-    header .burgerMenu i {
-      font-size: 50px;
-      transition: .3s;
-      color: #3080E3; }
-      header .burgerMenu i:hover {
-        color: #fd723b; }
-  header ul.navListBurger {
-    position: absolute;
-    top: 100px;
-    width: 90%;
-    padding: 0; }
-    header ul.navListBurger div.accordion {
-      box-shadow: 0px 0px 20px -5px gray;
-      border-radius: 20px; }
-      header ul.navListBurger div.accordion div.nonCollapsBurgerNav {
-        height: 52px;
-        display: flex;
-        align-items: center; }
-        header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 {
-          padding: 19px; }
-          header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a {
-            transition: .3s color;
-            text-decoration: none;
-            color: black; }
-            header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a:hover {
-              color: #3080E3; }
-      header ul.navListBurger div.accordion .accordion-button:not(.collapsed) {
-        background-color: white; }
-      header ul.navListBurger div.accordion div.accordion-item:first-of-type .accordion-button {
-        border-top-left-radius: 20px !important;
-        border-top-right-radius: 20px !important; }
-      header ul.navListBurger div.accordion div.accordion-item:last-of-type .accordion-button {
-        border-bottom-left-radius: 20px !important;
-        border-bottom-right-radius: 20px !important; }
-      header ul.navListBurger div.accordion div.accordion-item:last-of-type {
-        border-bottom-left-radius: 20px !important;
-        border-bottom-right-radius: 20px !important; }
-      header ul.navListBurger div.accordion div.accordion-item.nonCollapsBurgerNav {
-        border-radius: 0px !important; }
-      header ul.navListBurger div.accordion div.accordion-item {
-        border-top-left-radius: 20px !important;
-        border-top-right-radius: 20px !important;
-        border: none; }
-        header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button {
-          font-weight: 500;
-          transition: .3s color; }
-          header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button:hover {
-            color: #3080E3; }
-        header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul {
-          list-style: none; }
-          header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a {
-            transition: .3s color;
-            text-decoration: none;
-            color: gray; }
-            header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a:hover {
-              color: #3080E3; }
+  transition: .3s;
+}
+
+header .navLogo {
+  height: 100%;
+  width: 10%;
+  display: inherit;
+  align-items: center;
+}
+
+header .navLogo img {
+  height: 35%;
+}
+
+header nav {
+  display: inherit;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+header nav .navList {
+  display: inherit;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 21%;
+}
+
+header nav .navList li.home {
+  position: relative;
+}
+
+header nav .navList li.home ul {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: .5s;
+  height: 0;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0px 0px 15px -10px gray;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -100px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header nav .navList li.home ul li a {
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav .navList li.home ul li a:hover {
+  color: #3080E3;
+}
+
+header nav .navList li.home:hover ul {
+  height: 100px;
+  opacity: 100%;
+  transform: translateY(0px);
+}
+
+header nav .navList li.Pages {
+  position: relative;
+}
+
+header nav .navList li.Pages ul {
+  transform: translateY(-120px);
+  opacity: 0;
+  transition: 0.5s;
+  height: 0px;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0px 0px 15px -10px gray;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -350px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header nav .navList li.Pages ul li a {
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav .navList li.Pages ul li a:hover {
+  color: #3080E3;
+}
+
+header nav .navList li.Pages:hover ul {
+  height: 350px;
+  opacity: 100;
+  transform: translateY(0px);
+}
+
+header nav .navList li.Blog {
+  position: relative;
+}
+
+header nav .navList li.Blog ul {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: 0.5s;
+  height: 0;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0px 0px 15px -10px gray;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -100px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header nav .navList li.Blog ul li a {
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav .navList li.Blog ul li a:hover {
+  color: #3080E3;
+}
+
+header nav .navList li.Blog:hover ul {
+  height: 100px;
+  opacity: 100;
+  transform: translateY(0px);
+}
+
+header nav .navList li {
+  height: 100%;
+  display: inherit;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0px 10px 0px 10px;
+}
+
+header nav .navList li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  transition: .3s color;
+}
+
+header nav .navList li:hover a {
+  color: #3080E3;
+}
+
+header .loginFormButtons {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .loginFormButtons a {
+  margin: 0px 5px 0px 5px;
+}
+
+header .loginFormButtons .signInButton {
+  text-decoration: none;
+  color: white;
+  transition: .3s color;
+  white-space: nowrap;
+}
+
+header .loginFormButtons .signInButton:hover {
+  text-decoration: underline;
+}
+
+header .loginFormButtons .signUpButton {
+  text-decoration: none;
+  color: black;
+  transition: .3s background-color, .3s color;
+  font-weight: 500;
+  background-color: white;
+  height: 45px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+header .loginFormButtons .signUpButton:hover {
+  color: white;
+  background-color: #fd723b;
+}
+
+header .burgerMenu {
+  display: none;
+  position: relative;
+}
+
+header .burgerMenu i {
+  font-size: 50px;
+  transition: .3s;
+  color: #3080E3;
+}
+
+header .burgerMenu i:hover {
+  color: #fd723b;
+}
+
+header ul.navListBurger {
+  position: absolute;
+  top: 100px;
+  width: 90%;
+  padding: 0;
+}
+
+header ul.navListBurger div.accordion {
+  box-shadow: 0px 0px 20px -5px gray;
+  border-radius: 20px;
+}
+
+header ul.navListBurger div.accordion div.nonCollapsBurgerNav {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 {
+  padding: 19px;
+}
+
+header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a {
+  transition: .3s color;
+  text-decoration: none;
+  color: black;
+}
+
+header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a:hover {
+  color: #3080E3;
+}
+
+header ul.navListBurger div.accordion .accordion-button:not(.collapsed) {
+  background-color: white;
+}
+
+header ul.navListBurger div.accordion div.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+
+header ul.navListBurger div.accordion div.accordion-item:last-of-type .accordion-button {
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+header ul.navListBurger div.accordion div.accordion-item:last-of-type {
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+header ul.navListBurger div.accordion div.accordion-item.nonCollapsBurgerNav {
+  border-radius: 0px !important;
+}
+
+header ul.navListBurger div.accordion div.accordion-item {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  border: none;
+}
+
+header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button {
+  font-weight: 500;
+  transition: .3s color;
+}
+
+header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button:hover {
+  color: #3080E3;
+}
+
+header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul {
+  list-style: none;
+}
+
+header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a {
+  transition: .3s color;
+  text-decoration: none;
+  color: gray;
+}
+
+header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a:hover {
+  color: #3080E3;
+}
 
 @media only screen and (max-width: 996px) {
   .bubbles {
-    display: none; }
+    display: none;
+  }
+
   header nav {
-    display: none; }
+    display: none;
+  }
+
   header .loginFormButtons {
-    display: none; }
+    display: none;
+  }
+
   header .burgerMenu {
-    display: block; } }
+    display: block;
+  }
+}
 
 main {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
+
+main .mainSec {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .mainSec .mainDescriptionSec {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-around;
+}
+
+main .mainSec .mainDescriptionSec .mainDescTitle {
+  width: 90%;
+}
+
+main .mainSec .mainDescriptionSec .mainDescTitle p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: -2px;
+}
+
+main .mainSec .mainDescriptionSec .mainDescTitle .complex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+main .mainSec .mainDescriptionSec .mainDescTitle .fourth {
+  color: #fd723b;
+}
+
+main .mainSec .mainDescriptionSec .freeTrial {
+  border: none;
+  height: 53px;
+  width: 200px;
+  background-color: #3080E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  transition: .4s background-color;
+}
+
+main .mainSec .mainDescriptionSec .freeTrial:hover {
+  background-color: #fd723b;
+}
+
+main .mainSec .mainSecImage {
+  height: 490px;
+  width: 726px;
+}
+
+main .mainSec .mainSecImage img {
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px -10px #adadad;
+}
+
+@media only screen and (max-width: 996px) {
   main .mainSec {
+    flex-direction: column;
+  }
+
+  main .mainSec .mainDescriptionSec {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around; }
-    main .mainSec .mainDescriptionSec {
-      display: flex;
-      flex-direction: column;
-      height: 60%;
-      justify-content: space-around; }
-      main .mainSec .mainDescriptionSec .mainDescTitle {
-        width: 90%; }
-        main .mainSec .mainDescriptionSec .mainDescTitle p {
-          font-family: "Poppins", sans-serif;
-          font-weight: 700;
-          font-size: 40px;
-          margin-bottom: -2px; }
-        main .mainSec .mainDescriptionSec .mainDescTitle .complex {
-          display: flex;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          width: 90%; }
-        main .mainSec .mainDescriptionSec .mainDescTitle .fourth {
-          color: #fd723b; }
-      main .mainSec .mainDescriptionSec .freeTrial {
-        border: none;
-        height: 53px;
-        width: 200px;
-        background-color: #3080E3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: 500;
-        transition: .4s background-color; }
-        main .mainSec .mainDescriptionSec .freeTrial:hover {
-          background-color: #fd723b; }
-    main .mainSec .mainSecImage {
-      height: 490px;
-      width: 726px; }
-      main .mainSec .mainSecImage img {
-        border-radius: 30px;
-        box-shadow: 0px 0px 20px -10px #adadad; }
-  @media only screen and (max-width: 996px) {
-    main .mainSec {
-      flex-direction: column; }
-      main .mainSec .mainDescriptionSec {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        main .mainSec .mainDescriptionSec .mainDescTitle {
-          display: flex;
-          flex-direction: column;
-          align-items: center; }
-          main .mainSec .mainDescriptionSec .mainDescTitle .complex {
-            width: 95%; }
-          main .mainSec .mainDescriptionSec .mainDescTitle p {
-            font-size: 28px; }
-        main .mainSec .mainDescriptionSec .mainDescription {
-          text-align: center; }
-      main .mainSec .mainSecImage {
-        width: 100%; }
-        main .mainSec .mainSecImage img {
-          width: 100%; } }
+  }
+
+  main .mainSec .mainDescriptionSec .mainDescTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .mainSec .mainDescriptionSec .mainDescTitle .complex {
+    width: 95%;
+  }
+
+  main .mainSec .mainDescriptionSec .mainDescTitle p {
+    font-size: 28px;
+  }
+
+  main .mainSec .mainDescriptionSec .mainDescription {
+    text-align: center;
+  }
+
+  main .mainSec .mainSecImage {
+    width: 100%;
+  }
+
+  main .mainSec .mainSecImage img {
+    width: 100%;
+  }
+}
+
+main .serviceWeProvide {
+  height: 100vh;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .serviceWeProvide .serviceDescription {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  justify-content: space-around;
+}
+
+main .serviceWeProvide .serviceDescription .mainTitleServ {
+  border: 2px solid #3080E3;
+  border-radius: 20px;
+  width: 200px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .serviceWeProvide .serviceDescription .mainTitleServ h6 {
+  color: #3080E3;
+  margin: 0;
+}
+
+main .serviceWeProvide .serviceDescription .title {
+  width: 40%;
+}
+
+main .serviceWeProvide .serviceDescription .title h2 {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'roboto';
+}
+
+main .serviceWeProvide .serviceDescription .descriptionServ {
+  width: 80%;
+}
+
+main .serviceWeProvide .serviceDescription .descriptionServ p {
+  text-align: center;
+  color: gray;
+}
+
+main .serviceWeProvide .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 50%;
+}
+
+main .serviceWeProvide .cards .cardElements {
+  width: 30%;
+  height: 90%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px -14px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+main .serviceWeProvide .cards .cardElements .cardLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .serviceWeProvide .cards .cardElements .cardLogo i {
+  color: white;
+  font-size: 20px;
+}
+
+main .serviceWeProvide .cards .cardElements .cardLogo.cardMix {
+  background-color: #3080E3;
+  box-shadow: 0px 4px 20px -5px #3080E3;
+}
+
+main .serviceWeProvide .cards .cardElements .cardLogo.cardHeart {
+  background-color: #fd723b;
+  box-shadow: 0px 4px 20px -5px #fd723b;
+}
+
+main .serviceWeProvide .cards .cardElements .cardLogo.cardFinger {
+  background-color: #ffa842;
+  box-shadow: 0px 4px 20px -5px #ffa842;
+}
+
+main .serviceWeProvide .cards .cardElements h3.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+main .serviceWeProvide .cards .cardElements p.cardDesc {
+  color: gray;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+main .serviceWeProvide .cards .cardElements a.learnMore {
+  text-decoration: none;
+  transition: .3s transform;
+  transform: translate(-1%, -1%);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main .serviceWeProvide .cards .cardElements a.learnMore:hover {
+  transform: scale(1.1) translateX(5%);
+}
+
+main .serviceWeProvide .cards .cardElements a.learnMore.cardMix {
+  color: #3080E3;
+}
+
+main .serviceWeProvide .cards .cardElements a.learnMore.cardHeart {
+  color: #fd723b;
+}
+
+main .serviceWeProvide .cards .cardElements a.learnMore.cardFinger {
+  color: #ffa842;
+}
+
+@media only screen and (max-width: 996px) {
   main .serviceWeProvide {
-    height: 100vh;
-    background-color: #f4f7fa;
+    height: 160vh;
+    justify-content: space-evenly;
+  }
+
+  main .serviceWeProvide .serviceDescription .title {
+    width: 70%;
+  }
+
+  main .serviceWeProvide .cards {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  main .serviceWeProvide .cards .cardElements {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 20px;
+  }
+}
+
+main .management {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+main .management .managementImage {
+  width: 40%;
+}
+
+main .management .managementImage img {
+  width: 100%;
+}
+
+main .management .managementDescriptionSec {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+}
+
+main .management .managementDescriptionSec h6.mainTitleMan {
+  color: #3080E3;
+  font-size: 15px;
+}
+
+main .management .managementDescriptionSec h2.titleMan {
+  font-weight: 700;
+  font-size: 35px;
+  font-family: 'roboto';
+}
+
+main .management .managementDescriptionSec .descriptionMan p {
+  color: gray;
+  font-family: 'roboto';
+}
+
+main .management .managementDescriptionSec .buttonsMan {
+  width: 100%;
+  display: flex;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan {
+  width: 50%;
+  display: inherit;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  box-shadow: 0px 0px 20px -12px gray;
+  transition: .3s;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .logo i {
+  color: #3080E3;
+  font-size: 20px;
+  transition: .3s;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .logo:hover {
+  background-color: #3080E3;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .logo:hover i {
+  color: white;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .descButton {
+  width: 70%;
+}
+
+main .management .managementDescriptionSec .buttonsMan .buttonMan .descButton p {
+  font-family: 'roboto';
+  color: gray;
+}
+
+@media only screen and (max-width: 996px) {
+  main .management {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 110vh;
+  }
+
+  main .management .managementImage {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    main .serviceWeProvide .serviceDescription {
-      display: inherit;
-      flex-direction: column;
-      align-items: center;
-      height: 30%;
-      justify-content: space-around; }
-      main .serviceWeProvide .serviceDescription .mainTitleServ {
-        border: 2px solid #3080E3;
-        border-radius: 20px;
-        width: 200px;
-        height: 35px;
-        display: inherit;
-        justify-content: center;
-        align-items: center; }
-        main .serviceWeProvide .serviceDescription .mainTitleServ h6 {
-          color: #3080E3;
-          margin: 0; }
-      main .serviceWeProvide .serviceDescription .title {
-        width: 40%; }
-        main .serviceWeProvide .serviceDescription .title h2 {
-          text-align: center;
-          font-weight: 700;
-          font-family: 'roboto'; }
-      main .serviceWeProvide .serviceDescription .descriptionServ {
-        width: 80%; }
-        main .serviceWeProvide .serviceDescription .descriptionServ p {
-          text-align: center;
-          color: gray; }
-    main .serviceWeProvide .cards {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 85%;
-      height: 50%; }
-      main .serviceWeProvide .cards .cardElements {
-        width: 30%;
-        height: 90%;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0px 0px 20px -14px gray;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 30px; }
-        main .serviceWeProvide .cards .cardElements .cardLogo {
-          width: 50px;
-          height: 50px;
-          border-radius: 13px;
-          display: inherit;
-          justify-content: center;
-          align-items: center; }
-          main .serviceWeProvide .cards .cardElements .cardLogo i {
-            color: white;
-            font-size: 20px; }
-        main .serviceWeProvide .cards .cardElements .cardLogo.cardMix {
-          background-color: #3080E3;
-          box-shadow: 0px 4px 20px -5px #3080E3; }
-        main .serviceWeProvide .cards .cardElements .cardLogo.cardHeart {
-          background-color: #fd723b;
-          box-shadow: 0px 4px 20px -5px #fd723b; }
-        main .serviceWeProvide .cards .cardElements .cardLogo.cardFinger {
-          background-color: #ffa842;
-          box-shadow: 0px 4px 20px -5px #ffa842; }
-        main .serviceWeProvide .cards .cardElements h3.cardTitle {
-          font-size: 20px;
-          font-weight: 600;
-          margin-top: 20px; }
-        main .serviceWeProvide .cards .cardElements p.cardDesc {
-          color: gray;
-          font-family: 'Roboto';
-          font-size: 16px; }
-        main .serviceWeProvide .cards .cardElements a.learnMore {
-          text-decoration: none;
-          transition: .3s transform;
-          transform: translate(-1%, -1%);
-          font-size: 15px;
-          font-weight: 500; }
-          main .serviceWeProvide .cards .cardElements a.learnMore:hover {
-            transform: scale(1.1) translateX(5%); }
-        main .serviceWeProvide .cards .cardElements a.learnMore.cardMix {
-          color: #3080E3; }
-        main .serviceWeProvide .cards .cardElements a.learnMore.cardHeart {
-          color: #fd723b; }
-        main .serviceWeProvide .cards .cardElements a.learnMore.cardFinger {
-          color: #ffa842; }
-  @media only screen and (max-width: 996px) {
-    main .serviceWeProvide {
-      height: 160vh;
-      justify-content: space-evenly; }
-      main .serviceWeProvide .serviceDescription .title {
-        width: 70%; }
-      main .serviceWeProvide .cards {
-        flex-direction: column;
-        justify-content: space-evenly; }
-        main .serviceWeProvide .cards .cardElements {
-          width: 100%;
-          height: 40%;
-          margin-bottom: 20px; } }
-  main .management {
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  }
+
+  main .management .managementImage img {
+    width: 90%;
+  }
+
+  main .management .managementDescriptionSec {
     width: 100%;
-    background-color: white; }
-    main .management .managementImage {
-      width: 40%; }
-      main .management .managementImage img {
-        width: 100%; }
-    main .management .managementDescriptionSec {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 60%; }
-      main .management .managementDescriptionSec h6.mainTitleMan {
-        color: #3080E3;
-        font-size: 15px; }
-      main .management .managementDescriptionSec h2.titleMan {
-        font-weight: 700;
-        font-size: 35px;
-        font-family: 'roboto'; }
-      main .management .managementDescriptionSec .descriptionMan p {
-        color: gray;
-        font-family: 'roboto'; }
-      main .management .managementDescriptionSec .buttonsMan {
-        width: 100%;
-        display: flex; }
-        main .management .managementDescriptionSec .buttonsMan .buttonMan {
-          width: 50%;
-          display: inherit; }
-          main .management .managementDescriptionSec .buttonsMan .buttonMan .logo {
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
-            background-color: white;
-            display: inherit;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-            box-shadow: 0px 0px 20px -12px gray;
-            transition: .3s; }
-            main .management .managementDescriptionSec .buttonsMan .buttonMan .logo i {
-              color: #3080E3;
-              font-size: 20px;
-              transition: .3s; }
-            main .management .managementDescriptionSec .buttonsMan .buttonMan .logo:hover {
-              background-color: #3080E3; }
-              main .management .managementDescriptionSec .buttonsMan .buttonMan .logo:hover i {
-                color: white; }
-          main .management .managementDescriptionSec .buttonsMan .buttonMan .descButton {
-            width: 70%; }
-            main .management .managementDescriptionSec .buttonsMan .buttonMan .descButton p {
-              font-family: 'roboto';
-              color: gray; }
-  @media only screen and (max-width: 996px) {
-    main .management {
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 110vh; }
-      main .management .managementImage {
-        width: 100%;
-        display: flex;
-        justify-content: center; }
-        main .management .managementImage img {
-          width: 90%; }
-      main .management .managementDescriptionSec {
-        width: 100%;
-        align-items: center; }
-        main .management .managementDescriptionSec h2.titleMan {
-          text-align: center; }
-        main .management .managementDescriptionSec .descriptionMan {
-          width: 90%; }
-          main .management .managementDescriptionSec .descriptionMan p {
-            text-align: center; }
-        main .management .managementDescriptionSec .buttonsMan {
-          flex-direction: column;
-          width: 100%;
-          align-items: center; }
-          main .management .managementDescriptionSec .buttonsMan .buttonMan {
-            width: 90%;
-            margin-bottom: 20px; } }
+    align-items: center;
+  }
+
+  main .management .managementDescriptionSec h2.titleMan {
+    text-align: center;
+  }
+
+  main .management .managementDescriptionSec .descriptionMan {
+    width: 90%;
+  }
+
+  main .management .managementDescriptionSec .descriptionMan p {
+    text-align: center;
+  }
+
+  main .management .managementDescriptionSec .buttonsMan {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  main .management .managementDescriptionSec .buttonsMan .buttonMan {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+main .customization {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  background-color: #151515;
+  position: relative;
+  z-index: -1;
+}
+
+main .customization .customizationDescriptionSec {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+}
+
+main .customization .customizationDescriptionSec h6.mainTitleCus {
+  color: #3080E3;
+  font-size: 15px;
+}
+
+main .customization .customizationDescriptionSec h2.titleCus {
+  font-weight: 700;
+  font-size: 35px;
+  color: white;
+  font-family: 'roboto';
+}
+
+main .customization .customizationDescriptionSec .descriptionCus p {
+  color: white;
+  font-family: 'roboto';
+}
+
+main .customization .customizationDescriptionSec .becomefaster {
+  width: 100%;
+  display: flex;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #3080E3;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  box-shadow: 0px 0px 25px -5px #3080E3;
+  transition: .3s;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logo i {
+  color: white;
+  font-size: 23px;
+  transition: .3s;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logo:hover {
+  background-color: white;
+  box-shadow: 0px 0px 25px -5px white;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logo:hover i {
+  color: #3080E3;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logoDesc {
+  font-family: 'roboto';
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logoDesc h6 {
+  color: white;
+  font-weight: 400;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logoDesc a {
+  display: inline-block;
+  color: #3080E3;
+  text-decoration: none;
+  transition: .3s;
+}
+
+main .customization .customizationDescriptionSec .becomefaster .logoDesc a:hover {
+  transform: scale(1.1) translateX(5%);
+}
+
+main .customization .custamizationtImage {
+  width: 40%;
+}
+
+main .customization .custamizationtImage img {
+  width: 100%;
+}
+
+main .customization .backLights {
+
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 90vh;
+}
+
+main .customization .backLights img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
+
+main .customization .backLights img.blue {
+  left: -12%;
+  top: 10%;
+}
+
+main .customization .backLights img.red {
+  right: 20%;
+  top: 10%;
+}
+
+@media only screen and (max-width: 996px) {
   main .customization {
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    height: 110vh;
+  }
+
+  main .customization .custamizationtImage {
     width: 100%;
-    background-color: white;
-    background-color: #151515;
-    position: relative;
-    z-index: 1; }
-    main .customization .customizationDescriptionSec {
-      position: relative;
-      z-index: 2;
-      width: 40%;
-      display: inherit;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 60%; }
-      main .customization .customizationDescriptionSec h6.mainTitleCus {
-        color: #3080E3;
-        font-size: 15px; }
-      main .customization .customizationDescriptionSec h2.titleCus {
-        font-weight: 700;
-        font-size: 35px;
-        color: white;
-        font-family: 'roboto'; }
-      main .customization .customizationDescriptionSec .descriptionCus p {
-        color: white;
-        font-family: 'roboto'; }
-      main .customization .customizationDescriptionSec .becomefaster {
-        width: 100%;
-        display: flex; }
-        main .customization .customizationDescriptionSec .becomefaster .logo {
-          height: 60px;
-          width: 60px;
-          border-radius: 50%;
-          background-color: #3080E3;
-          display: inherit;
-          justify-content: center;
-          align-items: center;
-          margin-right: 20px;
-          box-shadow: 0px 0px 25px -5px #3080E3;
-          transition: .3s; }
-          main .customization .customizationDescriptionSec .becomefaster .logo i {
-            color: white;
-            font-size: 23px;
-            transition: .3s; }
-          main .customization .customizationDescriptionSec .becomefaster .logo:hover {
-            background-color: white;
-            box-shadow: 0px 0px 25px -5px white; }
-            main .customization .customizationDescriptionSec .becomefaster .logo:hover i {
-              color: #3080E3; }
-        main .customization .customizationDescriptionSec .becomefaster .logoDesc {
-          font-family: 'roboto'; }
-          main .customization .customizationDescriptionSec .becomefaster .logoDesc h6 {
-            color: white;
-            font-weight: 400; }
-          main .customization .customizationDescriptionSec .becomefaster .logoDesc a {
-            display: inline-block;
-            color: #3080E3;
-            text-decoration: none;
-            transition: .3s; }
-            main .customization .customizationDescriptionSec .becomefaster .logoDesc a:hover {
-              transform: scale(1.1) translateX(5%); }
-    main .customization .custamizationtImage {
-      width: 40%; }
-      main .customization .custamizationtImage img {
-        width: 100%; }
-    main .customization .backLights {
-      position: absolute;
-      width: 100%;
-      overflow: hidden;
-      height: 90vh; }
-      main .customization .backLights img {
-        position: absolute;
-        height: 100%;
-        width: auto;
-        z-index: -1; }
-      main .customization .backLights img.blue {
-        left: -12%;
-        top: 10%; }
-      main .customization .backLights img.red {
-        right: 20%;
-        top: 10%; }
-  @media only screen and (max-width: 996px) {
-    main .customization {
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 110vh; }
-      main .customization .custamizationtImage {
-        width: 100%;
-        display: flex;
-        justify-content: center; }
-        main .customization .custamizationtImage img {
-          width: 90%; }
-      main .customization .customizationDescriptionSec {
-        width: 100%;
-        align-items: center; }
-        main .customization .customizationDescriptionSec h2.titleCus {
-          width: 90%;
-          text-align: center; }
-        main .customization .customizationDescriptionSec .descriptionCus {
-          width: 90%; }
-          main .customization .customizationDescriptionSec .descriptionCus p {
-            text-align: center; }
-        main .customization .customizationDescriptionSec .becomefaster {
-          width: 100%;
-          align-items: center;
-          justify-content: center; } }
+    display: flex;
+    justify-content: center;
+  }
+
+  main .customization .custamizationtImage img {
+    width: 90%;
+  }
+
+  main .customization .customizationDescriptionSec {
+    width: 100%;
+    align-items: center;
+  }
+
+  main .customization .customizationDescriptionSec h2.titleCus {
+    width: 90%;
+    text-align: center;
+  }
+
+  main .customization .customizationDescriptionSec .descriptionCus {
+    width: 90%;
+  }
+
+  main .customization .customizationDescriptionSec .descriptionCus p {
+    text-align: center;
+  }
+
+  main .customization .customizationDescriptionSec .becomefaster {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+main .pricing {
+  height: 120vh;
+  background-color: #f4f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+}
+
+main .pricing .pricingDesc {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  height: 22%;
+  justify-content: space-around;
+}
+
+main .pricing .pricingDesc .mainTitlePrice {
+  border: 2px solid #3080E3;
+  border-radius: 20px;
+  width: 130px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .pricing .pricingDesc .mainTitlePrice h6 {
+  color: #3080E3;
+  margin: 0;
+}
+
+main .pricing .pricingDesc .title {
+  width: 40%;
+}
+
+main .pricing .pricingDesc .title h2 {
+  font-family: 'roboto';
+  text-align: center;
+  font-weight: 700;
+}
+
+main .pricing .pricingDesc .descriptionPrice {
+  width: 80%;
+}
+
+main .pricing .pricingDesc .descriptionPrice p {
+  text-align: center;
+  color: gray;
+}
+
+main .pricing .pricingCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 65%;
+}
+
+main .pricing .pricingCards .pricingCard {
+  width: 30%;
+  height: 90%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px -14px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+}
+
+main .pricing .pricingCards .pricingCard .cardTitle {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 120px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .pricing .pricingCards .pricingCard .cardTitle h6 {
+  margin: 0;
+}
+
+main .pricing .pricingCards .pricingCard .cardDesc {
+  width: 95%;
+}
+
+main .pricing .pricingCards .pricingCard .cardDesc p {
+  color: gray;
+  text-align: center;
+  font-size: 13px;
+}
+
+main .pricing .pricingCards .pricingCard .cardPrice {
+  height: 20%;
+}
+
+main .pricing .pricingCards .pricingCard .cardPrice span.priceAll {
+  position: relative;
+  display: inline-block;
+}
+
+main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .currency {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: -15px;
+  color: gray;
+}
+
+main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .value {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .month {
+  color: gray;
+  font-size: 14px;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 65%;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton .startFreeTrial {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.blue {
+  background-color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.blue:hover {
+  background-color: #fd723b;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.orange {
+  background-color: #fd723b;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.orange:hover {
+  background-color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.yellow {
+  background-color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard .cardButton.yellow:hover {
+  background-color: #fd723b;
+}
+
+main .pricing .pricingCards .pricingCard .cardExplain {
+  color: gray;
+  text-align: center;
+  font-size: 14px;
+}
+
+main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle {
+  border-color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle h6 {
+  color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard.exclusiveCard .exclusiveCardTitle {
+  border-color: #fd723b;
+}
+
+main .pricing .pricingCards .pricingCard.exclusiveCard .exclusiveCardTitle h6 {
+  color: #fd723b;
+}
+
+main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle {
+  border-color: #3080E3;
+}
+
+main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle h6 {
+  color: #3080E3;
+}
+
+@media only screen and (max-width: 996px) {
   main .pricing {
-    height: 120vh;
-    background-color: #f4f7fa;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
+    height: 230vh;
     justify-content: space-evenly;
-    align-items: center;
+  }
+
+  main .pricing .pricingDesc {
+    height: 20%;
+  }
+
+  main .pricing .pricingDesc .title {
+    width: 70%;
+  }
+
+  main .pricing .pricingCards {
     width: 100%;
-    padding: 50px; }
-    main .pricing .pricingDesc {
-      display: inherit;
-      flex-direction: column;
-      align-items: center;
-      height: 22%;
-      justify-content: space-around; }
-      main .pricing .pricingDesc .mainTitlePrice {
-        border: 2px solid #3080E3;
-        border-radius: 20px;
-        width: 130px;
-        height: 35px;
-        display: inherit;
-        justify-content: center;
-        align-items: center; }
-        main .pricing .pricingDesc .mainTitlePrice h6 {
-          color: #3080E3;
-          margin: 0; }
-      main .pricing .pricingDesc .title {
-        width: 40%; }
-        main .pricing .pricingDesc .title h2 {
-          font-family: 'roboto';
-          text-align: center;
-          font-weight: 700; }
-      main .pricing .pricingDesc .descriptionPrice {
-        width: 80%; }
-        main .pricing .pricingDesc .descriptionPrice p {
-          text-align: center;
-          color: gray; }
-    main .pricing .pricingCards {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      height: 65%; }
-      main .pricing .pricingCards .pricingCard {
-        width: 30%;
-        height: 90%;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0px 0px 20px -14px gray;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 40px;
-        align-items: center; }
-        main .pricing .pricingCards .pricingCard .cardTitle {
-          border: 2px solid black;
-          border-radius: 20px;
-          width: 120px;
-          height: 35px;
-          display: inherit;
-          justify-content: center;
-          align-items: center; }
-          main .pricing .pricingCards .pricingCard .cardTitle h6 {
-            margin: 0; }
-        main .pricing .pricingCards .pricingCard .cardDesc {
-          width: 95%; }
-          main .pricing .pricingCards .pricingCard .cardDesc p {
-            color: gray;
-            text-align: center;
-            font-size: 13px; }
-        main .pricing .pricingCards .pricingCard .cardPrice {
-          height: 20%; }
-          main .pricing .pricingCards .pricingCard .cardPrice span.priceAll {
-            position: relative;
-            display: inline-block; }
-            main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .currency {
-              display: inline-block;
-              position: absolute;
-              top: 8px;
-              left: -15px;
-              color: gray; }
-            main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .value {
-              font-size: 40px;
-              font-weight: 600; }
-            main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .month {
-              color: gray;
-              font-size: 14px; }
-        main .pricing .pricingCards .pricingCard .cardButton {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 50px;
-          width: 65%;
-          border-radius: 10px;
-          transition: .3s; }
-          main .pricing .pricingCards .pricingCard .cardButton .startFreeTrial {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px; }
-        main .pricing .pricingCards .pricingCard .cardButton.blue {
-          background-color: #3080E3; }
-          main .pricing .pricingCards .pricingCard .cardButton.blue:hover {
-            background-color: #fd723b; }
-        main .pricing .pricingCards .pricingCard .cardButton.orange {
-          background-color: #fd723b; }
-          main .pricing .pricingCards .pricingCard .cardButton.orange:hover {
-            background-color: #3080E3; }
-        main .pricing .pricingCards .pricingCard .cardButton.yellow {
-          background-color: #3080E3; }
-          main .pricing .pricingCards .pricingCard .cardButton.yellow:hover {
-            background-color: #fd723b; }
-        main .pricing .pricingCards .pricingCard .cardExplain {
-          color: gray;
-          text-align: center;
-          font-size: 14px; }
-      main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle {
-        border-color: #3080E3; }
-        main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle h6 {
-          color: #3080E3; }
-      main .pricing .pricingCards .pricingCard.exclusiveCard .exclusiveCardTitle {
-        border-color: #fd723b; }
-        main .pricing .pricingCards .pricingCard.exclusiveCard .exclusiveCardTitle h6 {
-          color: #fd723b; }
-      main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle {
-        border-color: #3080E3; }
-        main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle h6 {
-          color: #3080E3; }
-  @media only screen and (max-width: 996px) {
-    main .pricing {
-      padding: 10px;
-      height: 230vh;
-      justify-content: space-evenly; }
-      main .pricing .pricingDesc {
-        height: 20%; }
-        main .pricing .pricingDesc .title {
-          width: 70%; }
-      main .pricing .pricingCards {
-        width: 100%;
-        height: 80%;
-        flex-direction: column; }
-        main .pricing .pricingCards .pricingCard {
-          width: 95%;
-          height: 100%;
-          margin-bottom: 20px; } }
+    height: 80%;
+    flex-direction: column;
+  }
+
+  main .pricing .pricingCards .pricingCard {
+    width: 95%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+main .about {
+  height: 65vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+main .about .aboutDescriptionSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  justify-content: space-around;
+}
+
+main .about .aboutDescriptionSec .mainTitleAbout {
+  border: 2px solid #3080E3;
+  border-radius: 20px;
+  width: 130px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .about .aboutDescriptionSec .mainTitleAbout h6 {
+  color: #3080E3;
+  margin: 0;
+}
+
+main .about .aboutDescriptionSec .title h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+main .about .aboutDescriptionSec .descriptionAbout {
+  width: 80%;
+}
+
+main .about .aboutDescriptionSec .descriptionAbout p {
+  text-align: center;
+  color: gray;
+}
+
+main .about .persentageSec {
+  /* z-index: ; */
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+}
+
+main .about .persentageSec .pers {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+main .about .persentageSec .pers .persentageMain {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+main .about .persentageSec .pers .persentageMain .value {
+  display: flex;
+  align-items: center;
+}
+
+main .about .persentageSec .pers .persentageMain .value h2 {
+  font-weight: 700;
+  margin: 0;
+}
+
+main .about .persentageSec .pers .persentageMain .value span {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+main .about .persentageSec .pers .persentageMain p {
+  position: relative;
+  z-index: 2;
+  color: gray;
+  font-size: 14px;
+}
+
+main .about .persentageSec .pers .backHalfCircle {
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: -20px;
+}
+
+@media only screen and (max-width: 996px) {
   main .about {
-    height: 65vh;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 20px; }
-    main .about .aboutDescriptionSec {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 40%;
-      justify-content: space-around; }
-      main .about .aboutDescriptionSec .mainTitleAbout {
-        border: 2px solid #3080E3;
-        border-radius: 20px;
-        width: 130px;
-        height: 35px;
-        display: inherit;
-        justify-content: center;
-        align-items: center; }
-        main .about .aboutDescriptionSec .mainTitleAbout h6 {
-          color: #3080E3;
-          margin: 0; }
-      main .about .aboutDescriptionSec .title h2 {
-        text-align: center;
-        font-weight: 700; }
-      main .about .aboutDescriptionSec .descriptionAbout {
-        width: 80%; }
-        main .about .aboutDescriptionSec .descriptionAbout p {
-          text-align: center;
-          color: gray; }
-    main .about .persentageSec {
-      display: flex;
-      justify-content: space-evenly;
-      width: 75%; }
-      main .about .persentageSec .pers {
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 2; }
-        main .about .persentageSec .pers .persentageMain {
-          position: relative;
-          z-index: 2;
-          display: flex;
-          flex-direction: column; }
-          main .about .persentageSec .pers .persentageMain .value {
-            display: flex;
-            align-items: center; }
-            main .about .persentageSec .pers .persentageMain .value h2 {
-              font-weight: 700;
-              margin: 0; }
-            main .about .persentageSec .pers .persentageMain .value span {
-              font-weight: 700;
-              font-size: 30px; }
-          main .about .persentageSec .pers .persentageMain p {
-            position: relative;
-            z-index: 2;
-            color: gray;
-            font-size: 14px; }
-        main .about .persentageSec .pers .backHalfCircle {
-          position: absolute;
-          z-index: 1;
-          top: -15px;
-          left: -20px; }
-  @media only screen and (max-width: 996px) {
-    main .about {
-      height: 100vh; }
-      main .about .persentageSec {
-        height: 50%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly; } }
-  main .customerReviews {
     height: 100vh;
-    background-color: #f4f7fa;
-    display: flex;
+  }
+
+  main .about .persentageSec {
+    height: 50%;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    padding: 20px; }
-    main .customerReviews .testimonialsDescription {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      height: 30%; }
-      main .customerReviews .testimonialsDescription .mainTitleCustomer {
-        border: 2px solid #3080E3;
-        border-radius: 20px;
-        width: 200px;
-        height: 35px;
-        display: inherit;
-        justify-content: center;
-        align-items: center; }
-        main .customerReviews .testimonialsDescription .mainTitleCustomer h6 {
-          color: #3080E3;
-          margin: 0; }
-      main .customerReviews .testimonialsDescription .title {
-        width: 40%; }
-        main .customerReviews .testimonialsDescription .title h2 {
-          text-align: center;
-          font-weight: 700;
-          font-family: 'roboto'; }
-      main .customerReviews .testimonialsDescription .descriptionCustomer {
-        width: 90%; }
-        main .customerReviews .testimonialsDescription .descriptionCustomer p {
-          text-align: center;
-          color: gray; }
-    main .customerReviews .carouselTestimonials {
-      height: 50%; }
+    justify-content: space-evenly;
+  }
+}
+
+main .customerReviews {
+  height: 100vh;
+  background-color: #f4f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+main .customerReviews .testimonialsDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+}
+
+main .customerReviews .testimonialsDescription .mainTitleCustomer {
+  border: 2px solid #3080E3;
+  border-radius: 20px;
+  width: 200px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .customerReviews .testimonialsDescription .mainTitleCustomer h6 {
+  color: #3080E3;
+  margin: 0;
+}
+
+main .customerReviews .testimonialsDescription .title {
+  width: 40%;
+}
+
+main .customerReviews .testimonialsDescription .title h2 {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'roboto';
+}
+
+main .customerReviews .testimonialsDescription .descriptionCustomer {
+  width: 90%;
+}
+
+main .customerReviews .testimonialsDescription .descriptionCustomer p {
+  text-align: center;
+  color: gray;
+}
+
+main .customerReviews .testimonial-slider {
+  margin: 0;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial {
+  position: relative;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 70px 50px;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .shape1 {
+  position: absolute;
+  left: 40px;
+  top: 0;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .shape2 {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .inner-content {
+  position: relative;
+  z-index: 0;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .qote-icon {
+  position: absolute;
+  font-size: 70px;
+  top: 0;
+  color: #3333331a;
+  z-index: -1;
+  opacity: 0.2;
+  right: 0;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #151515;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .author {
+  position: relative;
+  padding-left: 70px;
+  margin-top: 40px;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .author img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .author h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #151515;
+}
+
+main .customerReviews .testimonial-slider .single-testimonial .author h4 span {
+  display: block;
+  color: #3080E3;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main .customerReviews .testimonial-slider .owl-dots .owl-dot span {
+  display: inline-block;
+  height: 6px;
+  width: 14px;
+  background-color: #d0cccc;
+  border-radius: 5px;
+  border: none;
+  margin: 0px 5px;
+  transition: all 0.4s ease;
+}
+
+main .customerReviews .testimonial-slider .owl-dots button.owl-dot.active span {
+  width: 25px;
+  background-color: #3080E3;
+}
+
+main .blogs {
+  height: 150vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+main .blogs .blogsDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20%;
+}
+
+main .blogs .blogsDesc .mainTitleBlogs {
+  border: 2px solid #3080E3;
+  border-radius: 20px;
+  width: 100px;
+  height: 35px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blogs .blogsDesc .mainTitleBlogs h6 {
+  color: #3080E3;
+  margin: 0;
+}
+
+main .blogs .blogsDesc .title {
+  width: 40%;
+}
+
+main .blogs .blogsDesc .title h2 {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'roboto';
+}
+
+main .blogs .blogsDesc .descriptionBlogs {
+  width: 90%;
+}
+
+main .blogs .blogsDesc .descriptionBlogs p {
+  text-align: center;
+  color: gray;
+}
+
+main .blogs .blogCards {
+  width: 100%;
+  height: 50%;
+}
+
+main .blogs .blogCards ul.cards {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  width: 100%;
+}
+
+main .blogs .blogCards ul.cards li.blogcards {
+  height: 90%;
+  width: 30%;
+  align-items: center;
+  display: inherit;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px -12px gray;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardImage {
+  width: 100%;
+  height: 50%;
+  transition: .3s;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardImage img {
+  transform: scale(1.22);
+  border-radius: 15px;
+  transition: .3s;
+}
+
+main .blogs .blogCards ul.cards li.blogcards:hover .cardImage img {
+  transform: scale(1.3);
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc {
+  padding: 15px;
+  height: 55%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc small.cardCategory {
+  font-weight: 500;
+  font-size: 13px;
+  font-family: 'roboto';
+  color: #3080E3;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc h4 {
+  font-size: 18px;
+  font-family: 'roboto';
+  transition: .3s;
+  cursor: pointer;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc h4:hover {
+  color: #3080E3;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc p {
+  color: gray;
+  font-size: 14px;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME {
+  text-decoration: none;
+  color: gray;
+  font-weight: 500;
+  font-size: 15px;
+  transition: .3s;
+}
+
+main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME:hover {
+  color: #3080E3;
+  transform: translateX(10px) scale(1.05);
+}
+
+main .blogs .backgroundGetStarted {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px 0px 50px;
+  background-color: #3080E3;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 20px -5px #3080E3;
+}
+
+main .blogs .backgroundGetStarted img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+main .blogs .backgroundGetStarted h3 {
+  color: white;
+}
+
+main .blogs .backgroundGetStarted .gettingStartedButton {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+main .blogs .backgroundGetStarted .gettingStartedButton a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+}
+
+main .blogs .backgroundGetStarted .gettingStartedButton:hover {
+  background-color: #fd723b;
+}
+
+main .blogs .backgroundGetStarted .gettingStartedButton:hover a {
+  color: white;
+}
+
+
+
+
+@media only screen and (max-width: 996px) {
   main .blogs {
-    height: 150vh;
-    background-color: white;
-    display: flex;
+    height: 250vh;
+    padding: 0px 10px 0px 10px;
+    justify-content: space-around;
+  }
+
+  main .blogs .blogCards ul.cards {
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  }
+
+  main .blogs .blogCards ul.cards li.blogcards {
     width: 100%;
-    padding: 20px; }
-    main .blogs .blogsDesc {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 20%; }
-      main .blogs .blogsDesc .mainTitleBlogs {
-        border: 2px solid #3080E3;
-        border-radius: 20px;
-        width: 100px;
-        height: 35px;
-        display: inherit;
-        justify-content: center;
-        align-items: center; }
-        main .blogs .blogsDesc .mainTitleBlogs h6 {
-          color: #3080E3;
-          margin: 0; }
-      main .blogs .blogsDesc .title {
-        width: 40%; }
-        main .blogs .blogsDesc .title h2 {
-          text-align: center;
-          font-weight: 700;
-          font-family: 'roboto'; }
-      main .blogs .blogsDesc .descriptionBlogs {
-        width: 90%; }
-        main .blogs .blogsDesc .descriptionBlogs p {
-          text-align: center;
-          color: gray; }
-    main .blogs .blogCards {
-      width: 100%;
-      height: 50%; }
-      main .blogs .blogCards ul.cards {
-        height: 100%;
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        width: 100%; }
-        main .blogs .blogCards ul.cards li.blogcards {
-          height: 90%;
-          width: 30%;
-          align-items: center;
-          display: inherit;
-          flex-direction: column;
-          padding: 15px;
-          border-radius: 20px;
-          box-shadow: 0px 0px 20px -12px gray; }
-          main .blogs .blogCards ul.cards li.blogcards .cardImage {
-            width: 100%;
-            height: 50%;
-            transition: .3s;
-            border-radius: 15px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center; }
-            main .blogs .blogCards ul.cards li.blogcards .cardImage img {
-              transform: scale(1.22);
-              border-radius: 15px;
-              transition: .3s; }
-          main .blogs .blogCards ul.cards li.blogcards:hover .cardImage img {
-            transform: scale(1.3); }
-          main .blogs .blogCards ul.cards li.blogcards .cardDesc {
-            padding: 15px;
-            height: 55%;
-            display: inherit;
-            flex-direction: column;
-            justify-content: space-evenly; }
-            main .blogs .blogCards ul.cards li.blogcards .cardDesc small.cardCategory {
-              font-weight: 500;
-              font-size: 13px;
-              font-family: 'roboto';
-              color: #3080E3; }
-            main .blogs .blogCards ul.cards li.blogcards .cardDesc h4 {
-              font-size: 18px;
-              font-family: 'roboto';
-              transition: .3s;
-              cursor: pointer; }
-              main .blogs .blogCards ul.cards li.blogcards .cardDesc h4:hover {
-                color: #3080E3; }
-            main .blogs .blogCards ul.cards li.blogcards .cardDesc p {
-              color: gray;
-              font-size: 14px; }
-            main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME {
-              text-decoration: none;
-              color: gray;
-              font-weight: 500;
-              font-size: 15px;
-              transition: .3s; }
-              main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME:hover {
-                color: #3080E3;
-                transform: translateX(10px) scale(1.05); }
-    main .blogs .backgroundGetStarted {
-      width: 90%;
-      height: 20%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 50px 0px 50px;
-      background-color: #3080E3;
-      border-radius: 20px;
-      position: relative;
-      box-shadow: 0px 0px 20px -5px #3080E3; }
-      main .blogs .backgroundGetStarted img {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 1; }
-      main .blogs .backgroundGetStarted h3 {
-        color: white; }
-      main .blogs .backgroundGetStarted .gettingStartedButton {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s;
-        border-radius: 10px;
-        width: 120px;
-        height: 50px;
-        cursor: pointer;
-        position: relative;
-        z-index: 2; }
-        main .blogs .backgroundGetStarted .gettingStartedButton a {
-          text-decoration: none;
-          font-size: 13px;
-          font-weight: 500;
-          color: black; }
-        main .blogs .backgroundGetStarted .gettingStartedButton:hover {
-          background-color: #fd723b; }
-          main .blogs .backgroundGetStarted .gettingStartedButton:hover a {
-            color: white; }
-  @media only screen and (max-width: 996px) {
-    main .blogs {
-      height: 250vh;
-      padding: 0px 10px 0px 10px;
-      justify-content: space-around; }
-      main .blogs .blogCards ul.cards {
-        flex-direction: column; }
-        main .blogs .blogCards ul.cards li.blogcards {
-          width: 100%;
-          margin-bottom: 20px; }
-      main .blogs .blogsDesc {
-        height: 10%; }
-        main .blogs .blogsDesc .title {
-          width: 80%; }
-      main .blogs .backgroundGetStarted {
-        height: 6%;
-        flex-direction: column;
-        z-index: 0;
-        justify-content: center; }
-        main .blogs .backgroundGetStarted img {
-          height: 30%;
-          z-index: 1; }
-        main .blogs .backgroundGetStarted h3 {
-          font-size: 18px;
-          text-align: center; }
-        main .blogs .backgroundGetStarted .gettingStartedButton {
-          position: relative;
-          z-index: 2; } }
+    margin-bottom: 20px;
+  }
+
+  main .blogs .blogsDesc {
+    height: 10%;
+  }
+
+  main .blogs .blogsDesc .title {
+    width: 80%;
+  }
+
+  main .blogs .backgroundGetStarted {
+    height: 6%;
+    flex-direction: column;
+    z-index: 0;
+    justify-content: center;
+  }
+
+  main .blogs .backgroundGetStarted img {
+    height: 30%;
+    z-index: 1;
+  }
+
+  main .blogs .backgroundGetStarted h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  main .blogs .backgroundGetStarted .gettingStartedButton {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+#testi {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 
 footer {
   display: flex;
   width: 100%;
   height: 45vh;
   justify-content: space-between;
-  padding: 0px 100px 0px 100px; }
-  footer .footerInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 25%;
-    height: 70%; }
-    footer .footerInfo img.logo {
-      height: 35px; }
-    footer .footerInfo p.footerDesc {
-      color: gray;
-      font-size: 15px; }
-    footer .footerInfo p.copyRight {
-      color: gray;
-      font-size: 15px; }
-      footer .footerInfo p.copyRight a {
-        color: #3080E3;
-        text-decoration: none;
-        transition: .3s; }
-        footer .footerInfo p.copyRight a:hover {
-          color: #fd723b; }
-  footer .footerLists {
-    height: 100%; }
-    footer .footerLists ul {
-      height: 65%;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly; }
-      footer .footerLists ul h5 {
-        font-size: 18px;
-        font-weight: 600; }
-      footer .footerLists ul div {
-        display: flex;
-        flex-direction: column;
-        height: 80%;
-        justify-content: space-evenly; }
-        footer .footerLists ul div li {
-          color: gray;
-          font-size: 15px;
-          font-family: 'roboto';
-          transition: .3s;
-          cursor: pointer; }
-          footer .footerLists ul div li:hover {
-            color: #3080E3; }
-  footer .subscribe {
-    width: 30%;
-    height: 65%; }
-    footer .subscribe form {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      margin-top: 5px;
-      height: 80%;
-      justify-content: space-between;
-      width: 80%; }
-      footer .subscribe form .subscribeDescs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 50%; }
-        footer .subscribe form .subscribeDescs h5 {
-          font-size: 18px;
-          font-weight: 600; }
-        footer .subscribe form .subscribeDescs p {
-          color: gray;
-          font-size: 14px;
-          white-space: nowrap; }
-      footer .subscribe form label {
-        position: relative; }
-        footer .subscribe form label input {
-          width: 100%;
-          height: 60px;
-          border-radius: 10px;
-          border-color: #e2e2e2;
-          border-style: solid;
-          border-width: 1px;
-          padding-left: 20px;
-          transition: .3s; }
-          footer .subscribe form label input:focus-visible {
-            border-width: 1px !important;
-            border-color: #3080E3 !important; }
-          footer .subscribe form label input:focus {
-            border: none;
-            border-color: #3080E3; }
-          footer .subscribe form label input:hover {
-            border-color: #3080E3; }
-        footer .subscribe form label button {
-          position: absolute;
-          background-color: #3080E3;
-          color: white;
-          height: 50px;
-          width: 50px;
-          right: 5px;
-          top: 5px; }
-          footer .subscribe form label button:hover {
-            background-color: #fd723b;
-            color: white;
-            border-color: #fd723b; }
-          footer .subscribe form label button i {
-            font-size: 18px; }
+  padding: 0px 100px 0px 100px;
+}
+
+footer .footerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 25%;
+  height: 70%;
+}
+
+footer .footerInfo img.logo {
+  height: 35px;
+}
+
+footer .footerInfo p.footerDesc {
+  color: gray;
+  font-size: 15px;
+}
+
+footer .footerInfo p.copyRight {
+  color: gray;
+  font-size: 15px;
+}
+
+footer .footerInfo p.copyRight a {
+  color: #3080E3;
+  text-decoration: none;
+  transition: .3s;
+}
+
+footer .footerInfo p.copyRight a:hover {
+  color: #fd723b;
+}
+
+footer .footerLists {
+  height: 100%;
+}
+
+footer .footerLists ul {
+  height: 65%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer .footerLists ul h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+footer .footerLists ul div {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-evenly;
+}
+
+footer .footerLists ul div li {
+  color: gray;
+  font-size: 15px;
+  font-family: 'roboto';
+  transition: .3s;
+  cursor: pointer;
+}
+
+footer .footerLists ul div li:hover {
+  color: #3080E3;
+}
+
+footer .subscribe {
+  width: 30%;
+  height: 65%;
+}
+
+footer .subscribe form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5px;
+  height: 80%;
+  justify-content: space-between;
+  width: 80%;
+}
+
+footer .subscribe form .subscribeDescs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+footer .subscribe form .subscribeDescs h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+footer .subscribe form .subscribeDescs p {
+  color: gray;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+footer .subscribe form label {
+  position: relative;
+}
+
+footer .subscribe form label input {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border-color: #e2e2e2;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 20px;
+  transition: .3s;
+}
+
+footer .subscribe form label input:focus-visible {
+  border-width: 1px !important;
+  border-color: #3080E3 !important;
+}
+
+footer .subscribe form label input:focus {
+  border: none;
+  border-color: #3080E3;
+}
+
+footer .subscribe form label input:hover {
+  border-color: #3080E3;
+}
+
+footer .subscribe form label button {
+  position: absolute;
+  background-color: #3080E3;
+  color: white;
+  height: 50px;
+  width: 50px;
+  right: 5px;
+  top: 5px;
+}
+
+footer .subscribe form label button:hover {
+  background-color: #fd723b;
+  color: white;
+  border-color: #fd723b;
+}
+
+footer .subscribe form label button i {
+  font-size: 18px;
+}
 
 @media only screen and (max-width: 996px) {
   footer {
@@ -1213,26 +1896,94 @@ footer {
     padding: 0px 20px 0px 20px;
     align-items: center;
     height: 100vh;
-    border: 1px solid black; }
-    footer .footerInfo {
-      width: 100%;
-      align-items: center; }
-      footer .footerInfo p.footerDesc {
-        text-align: center; }
-      footer .footerInfo p.copyRight {
-        text-align: center; }
-    footer .footerLists {
-      height: 100%; }
-      footer .footerLists h5 {
-        text-align: center; }
-      footer .footerLists ul {
-        padding: 0; }
-        footer .footerLists ul div {
-          align-items: center;
-          height: 100%;
-          justify-content: space-between; }
-          footer .footerLists ul div li {
-            font-size: 18px; } }
+    border: 1px solid black;
+  }
+
+  footer .footerInfo {
+    width: 100%;
+    align-items: center;
+  }
+
+  footer .footerInfo p.footerDesc {
+    text-align: center;
+  }
+
+  footer .footerInfo p.copyRight {
+    text-align: center;
+  }
+
+  footer .footerLists {
+    height: 100%;
+  }
+
+  footer .footerLists h5 {
+    text-align: center;
+  }
+
+  footer .footerLists ul {
+    padding: 0;
+  }
+
+  footer .footerLists ul div {
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  footer .footerLists ul div li {
+    font-size: 18px;
+  }
+}
 
 
-            
+@media screen and (max-width: 845px) {
+
+  h1 {
+    margin-right: 90px;
+    padding-top: 10px;
+  }
+
+  .home-line {
+    margin-left: 123px;
+  }
+
+  .contact-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .container .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-div {
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .foot {
+    width: 100%;
+  }
+
+  footer {
+    padding-top: 0;
+  }
+
+  footer .footer-top {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+}

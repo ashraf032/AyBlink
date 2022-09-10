@@ -30,10 +30,8 @@ const counters = document.querySelectorAll('.counter');
 
 
 
-    //Hi my home.js file 
 'use strict'
 
-//Scroll Navbar and buttons Functions start
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -88,30 +86,27 @@ function scrollFunction() {
         })
     })
   };
-//Scroll-top & Navbar & buttons Functions end
 
-//Burger Menu start
 $("ul.navListBurger").fadeOut(0.1);
 $('.clickBurger').click(function () {
   $("ul.navListBurger").fadeToggle(100);
 });
-//Burger Menu end
 
-//Carousel start
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 20,
-  nav: false,
-  items: 2,
+  nav: true,
+  items: 3,
   responsive: {
-      600: {
-          items: 1,
-      },
-      1000: {
-          items: 2,
-      }
-  }
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+   
+  },
 });
 
-//Carousel end
 
